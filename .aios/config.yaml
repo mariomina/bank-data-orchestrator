@@ -1,0 +1,11 @@
+version: 1.0.0
+project_type: monorepo
+framework: angular-node
+description: "Bank Data Orchestrator"
+agents:
+  default_mode: auto
+modules:
+  - path: ./client
+    type: frontend
+  - path: ./server
+    type: backend
