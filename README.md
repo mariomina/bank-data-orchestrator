@@ -1,55 +1,71 @@
-# Hola equipo de Enext 👋
-### Entrega de Prueba Técnica: Orquestador Bancario
+# 🏦 Bank Data Orchestrator
 
-Este repositorio contiene la **implementación completa de los requerimientos solicitados** para la prueba técnica Fullstack. El desarrollo se centró en cumplir puntualmente con cada característica funcional y técnica descrita en el desafío.
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
+![Status](https://img.shields.io/badge/Status-Active-brightgreen)
 
----
+## Descripción
+Esta es una aplicación **Full-Stack** diseñada como un "Orquestador de Datos Bancarios". Su propósito principal es demostrar una arquitectura segura de Cliente-Servidor donde el frontend no consume datos directamente, sino que todas las peticiones son proxy-ficadas y enriquecidas por un backend seguro.
 
-## ✅ Cumplimiento de Requerimientos
-
-A continuación, detallo cómo se abordó cada punto solicitado:
-
-1.  **Consumo de API Externa**: Se integró la fuente de datos solicitada (`jsonplaceholder`) a través de un servicio Node.js intermedio para asegurar la integridad de la respuesta.
-2.  **Seguridad (Login)**: Se implementó el sistema de autenticación requerido mediante **JWT**, protegiendo las rutas de datos y restringiendo el acceso no autorizado.
-3.  **Visualización de Datos**: El Frontend en **Angular 21** renderiza la información procesada en una interfaz clara y funcional.
-4.  **Contenerización**: Se entrega la infraestructura completa en **Docker**, garantizando que la aplicación corra en cualquier entorno sin configuraciones adicionales.
-
-## 🛠️ Stack Tecnológico Utilizado
-
-*   **Frontend**: Angular 21 (Standalone Components).
-*   **Backend**: Node.js + Express.
-*   **Infraestructura**: Docker & Docker Compose.
+### ✨ Características Principales
+*   **Arquitectura:** Monorepo (Angular + Node.js/Express).
+*   **Seguridad:** Autenticación JWT y credenciales robustas.
+*   **Orquestación:** Consumo de APIs externas simuladas a través del backend.
+*   **Diseño:** Interfaz moderna y responsiva.
 
 ---
 
-## 🚀 Instrucciones de Ejecución
+## 📸 Capturas de Pantalla
 
-Para verificar la aplicación, ejecute el siguiente comando en la raíz del proyecto:
+### Login (Seguro)
+Acceso restringido solo para personal autorizado.
+![Login Screen](docs/assets/login-screenshot.png)
 
-1.  **Levantar el entorno**:
-    ```bash
-    docker-compose up --build
-    ```
-2.  **Acceder al sistema**: Abra [http://localhost:8080](http://localhost:8080)
-3.  **Iniciar Sesión**:
-    *   Usuario: `admin`
-    *   Contraseña: `admin123`
+*(Nota: Dashboard consume datos de JSONPlaceholder para demostración)*
 
 ---
 
-## ☁️ Despliegue en la Nube (Render / Railway)
+## 🛠️ Stack Tecnológico
 
-Este proyecto ha sido optimizado para un **Despliegue Monolítico en Docker**, lo que facilita su publicación inmediata en plataformas como Render:
-
-1.  Conecte este repositorio a **Render.com**.
-2.  Seleccione **"New Web Service"**.
-3.  El servicio detectará automáticamente el archivo `Dockerfile` en la raíz.
-4.  ¡Listo! El Frontend y Backend se desplegarán en un solo servicio (puerto 3000 interno).
+| Componente | Tecnología | Versión |
+| :--- | :--- | :--- |
+| **Frontend** | Angular | v17+ |
+| **Backend** | Node.js + Express | Latest |
+| **Fuente de Datos** | [JSONPlaceholder](https://jsonplaceholder.typicode.com/) | API Externa |
+| **Container** | Docker | Ready |
 
 ---
 
-Quedo a su disposición para cualquier duda sobre el código entregado.
+## 🚀 Cómo Iniciar
 
-Atentamente,
-**Mario** 
-*Candidato Fullstack Developer*
+### Prerrequisitos
+- Node.js (v18+)
+- Docker (Opcional)
+
+### Instalación Rápida
+```bash
+# 1. Instalar dependencias
+cd server && npm install
+cd ../client && npm install
+
+# 2. Compilar Frontend
+cd ../client && npm run build
+
+# 3. Lanzar Orquestador
+cd ../server && npm start
+```
+
+Visita: `http://localhost:3000`
+
+---
+
+## 📄 Licencia
+Este proyecto es **Open Source** y está disponible bajo la licencia **MIT**. Siéntete libre de usarlo, modificarlo y distribuirlo.
+
+```text
+MIT License
+
+Copyright (c) 2026
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files...
+```
