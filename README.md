@@ -2,55 +2,65 @@
 
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 ![Status](https://img.shields.io/badge/Status-Active-brightgreen)
+![Angular](https://img.shields.io/badge/Angular-21-DD0031?logo=angular)
+![Node](https://img.shields.io/badge/Node.js-LTS-339933?logo=node.js)
 
-## Descripción
-Esta es una aplicación **Full-Stack** diseñada como un "Orquestador de Datos Bancarios". Su propósito principal es demostrar una arquitectura segura de Cliente-Servidor donde el frontend no consume datos directamente, sino que todas las peticiones son proxy-ficadas y enriquecidas por un backend seguro.
+## 📝 Descripción
+**Bank Data Orchestrator** es una solución profesional diseñada para la gestión segura y centralizada de flujos de datos bancarios. Actúa como una capa intermedia (Orquestador) que garantiza que el cliente nunca interactúe directamente con APIs sensibles, implementando patrones de seguridad de grado empresarial.
 
-### ✨ Características Principales
-*   **Arquitectura:** Monorepo (Angular + Node.js/Express).
-*   **Seguridad:** Autenticación JWT y credenciales robustas.
-*   **Orquestación:** Consumo de APIs externas simuladas a través del backend.
-*   **Diseño:** Interfaz moderna y responsiva.
+### ✨ Pilares del Proyecto
+*   **Seguridad Invisible:** Capa de autenticación JWT robusta.
+*   **Orquestación de Datos:** Consumo inteligente de servicios externos vía backend.
+*   **Arquitectura Monorepo:** Estructura organizada y escalable.
+*   **UI/UX Premium:** Interfaz de usuario moderna, limpia y responsiva.
 
 ---
 
-## 📸 Capturas de Pantalla
+## 📸 Galería del Proyecto
 
-### Login (Seguro)
-Acceso restringido solo para personal autorizado.
-![Login Screen](docs/assets/login-screenshot.png)
+### 🔐 Acceso Seguro
+Interfaz de login minimalista con validación en tiempo real.
+![Login Screen](docs/assets/login-view.png)
 
-*(Nota: Dashboard consume datos de JSONPlaceholder para demostración)*
+### 📊 Panel de Control (Dashboard)
+Visualización enriquecida de datos orquestados desde servicios externos.
+![Dashboard Screen](docs/assets/dashboard-view.png)
 
 ---
 
 ## 🛠️ Stack Tecnológico
 
-| Componente | Tecnología | Versión |
+| Capa | Tecnología | Función |
 | :--- | :--- | :--- |
-| **Frontend** | Angular | v17+ |
-| **Backend** | Node.js + Express | Latest |
-| **Fuente de Datos** | [JSONPlaceholder](https://jsonplaceholder.typicode.com/) | API Externa |
-| **Container** | Docker | Ready |
+| **Frontend** | Angular 21 | Interfaz de usuario dinámica |
+| **Backend** | Node.js + Express | Motor de orquestación y lógica |
+| **Seguridad** | JWT (JSON Web Tokens) | Gestión de sesiones y permisos |
+| **Fuentes** | REST APIs (Exteriores) | Origen de datos (JSONPlaceholder) |
+| **DevOps** | Docker | Contenerización y despliegue |
 
 ---
 
-## 🚀 Cómo Iniciar
+## 🚀 Guía de Inicio Rápido
 
 ### Prerrequisitos
 - Node.js (v18+)
-- Docker (Opcional)
+- NPM o PNPM
 
-### Instalación Rápida
+### Instalación y Ejecución
 ```bash
-# 1. Instalar dependencias
+# 1. Clonar e instalar dependencias
+git clone https://github.com/mariomina/bank-data-orchestrator.git
+cd bank-data-orchestrator
+
+# 2. Configurar Servidor
 cd server && npm install
+# (Asegúrate de configurar el .env con tu JWT_SECRET)
+
+# 3. Configurar y Compilar Cliente
 cd ../client && npm install
+npm run build
 
-# 2. Compilar Frontend
-cd ../client && npm run build
-
-# 3. Lanzar Orquestador
+# 4. Iniciar Aplicación
 cd ../server && npm start
 ```
 
@@ -59,13 +69,9 @@ Visita: `http://localhost:3000`
 ---
 
 ## 📄 Licencia
-Este proyecto es **Open Source** y está disponible bajo la licencia **MIT**. Siéntete libre de usarlo, modificarlo y distribuirlo.
+Este proyecto es **Open Source** y está bajo la [Licencia MIT](LICENSE).
 
-```text
-MIT License
+---
 
-Copyright (c) 2026
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files...
-```
+## 🧑‍💻 Autor
+Desarrollado con ❤️ para el ecosistema AIOS.
